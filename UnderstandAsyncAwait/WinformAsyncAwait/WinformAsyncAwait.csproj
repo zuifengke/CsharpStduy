@@ -1,14 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{20431444-3130-41A9-8918-4113744FCDCC}</ProjectGuid>
+    <ProjectGuid>{5154F4D7-44D0-43E3-A40C-3AA2BAA0FE62}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>CshorpStudy.WinForm</RootNamespace>
-    <AssemblyName>CshorpStudy.WinForm</AssemblyName>
+    <RootNamespace>WinformAsyncAwait</RootNamespace>
+    <AssemblyName>WinformAsyncAwait</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -32,12 +32,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Common.Libraries">
-      <HintPath>..\Include\Common.Libraries.dll</HintPath>
-    </Reference>
-    <Reference Include="Common.Ribbon">
-      <HintPath>..\Include\Common.Ribbon.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -56,31 +50,11 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Grid代码实现.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Grid代码实现.Designer.cs">
-      <DependentUpon>Grid代码实现.cs</DependentUpon>
-    </Compile>
+    <Compile Include="LongTimeOperation.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RibbonControl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="RibbonControl.Designer.cs">
-      <DependentUpon>RibbonControl.cs</DependentUpon>
-    </Compile>
-    <Compile Include="RibbonUse.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="RibbonUse.Designer.cs">
-      <DependentUpon>RibbonUse.cs</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Grid代码实现.resx">
-      <DependentUpon>Grid代码实现.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -90,14 +64,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="RibbonControl.resx">
-      <DependentUpon>RibbonControl.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="RibbonUse.resx">
-      <DependentUpon>RibbonUse.cs</DependentUpon>
-    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -110,27 +77,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\LoginPage.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\LoginPage2.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Input.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\2014093001345279_easyicon_net_16.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\20140930013502522_easyicon_net_16.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\DropDownPanel\DropDownPanel.csproj">
-      <Project>{67c763b8-927d-4793-bbac-35f92ca5b85b}</Project>
-      <Name>DropDownPanel</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
